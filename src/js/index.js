@@ -9,14 +9,14 @@ const query = async function () {
       "https://api.jikan.moe/v3/search/anime?q=&order_by=members&sort=desc&page=1"
     );
     const data = await response.json();
-    data.results.forEach((movie) => {
+    data.results.forEach((aniem) => {
       DOMSelectors.grid.insertAdjacentHTML(
         "beforeend",
         `
         <div class="movie-card">
           <div class="movie-card-front">
             <img
-              src="${movie.image_url}"
+              src="${anime.image_url}"
               alt=""
               class="poster"
             />
