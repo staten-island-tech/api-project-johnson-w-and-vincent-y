@@ -9,7 +9,7 @@ const query = async function () {
       "https://api.jikan.moe/v3/search/anime?q=&order_by=members&sort=desc&page=1"
     );
     const data = await response.json();
-    data.results.forEach((aniem) => {
+    data.results.forEach((anime) => {
       DOMSelectors.grid.insertAdjacentHTML(
         "beforeend",
         `
