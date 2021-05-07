@@ -7,12 +7,29 @@
       href="https://fonts.googleapis.com/css2?family=Asap:wght@400;600&family=Josefin+Slab:ital,wght@0,300;0,400;1,300&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="scss/style.scss"/>
+    <link rel="stylesheet" href="scss/style.scss" />
   </head>
   <body>
+    <div id="menu">
     <h1 class="header">Anime Database</h1>
+    <form id="search-form">
+      <textarea name="search-area" id="search-area" placeholder="Enter Anime Name"></textarea>
+      <input type="submit" class="submit-button">
+    </form>
+  </div>
     <section class="anime-grid">
-       <!-- <div class="movie-card">
+     <!-- <div class="anime-card">
+    
+               <img
+                 src="https://cdn.myanimelist.net/images/anime/1517/100633.jpg?s=4540a01b5883647ade494cd28392f100"
+                alt=""
+                class="poster"
+             />
+             
+         <h1 class="anime-header">Attack on Titandfglmkmjsdpgjpjgpedgjpeorgjprgjbvbporpienpkvpkpergnmpkghn</h1>
+        </div> -->
+     
+      <!-- <div class="movie-card">
         <div class="movie-card-front">
           <img
             src="https://image.tmdb.org/t/p/w300/r7vmZjiyZw9rpJMQJdXpjgiCOk9.jpg"
@@ -40,6 +57,12 @@
         </div>
       </div> -->
     </section>
+
+    <div id="nav-buttons">
+      <button class="prev-btn">Previous</button>
+      <div id="page-number">1</div>
+      <button class="prev-btn">Next</button>
+    </div>
 
     <script src="js/index.js"></script>
   </body>
