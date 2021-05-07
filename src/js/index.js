@@ -6,22 +6,22 @@ console.log(key);
 const query = async function () {
   try {
     const response = await fetch(
-      "https://api.jikan.moe/v3/search/anime?q=&order_by=members&sort=desc&page=1"
+      "https://api.jikan.moe/v3/search/anime?q=&order_by=score&sort=desc&page=1"
     );
     const data = await response.json();
     data.results.forEach((anime) => {
       DOMSelectors.grid.insertAdjacentHTML(
         "beforeend",
-        `
-        <div class="movie-card">
-          <div class="movie-card-front">
+        `  <div class="anime-card">
+
             <img
               src="${anime.image_url}"
-              alt=""
-              class="poster"
-            />
-          </div>
-          `
+             alt=""
+             class="poster"
+          />
+
+      <h1 class="anime-header">${anime.title}</h1>
+     </div>`
       );
     });
     console.log(data.results);
