@@ -20,22 +20,22 @@ body {
   flex-direction: row;
   width: 100vw;
   justify-content: space-around;
+  align-items: center;
 }
 
 #search-form {
   display: flex;
-  height: 100%;
-  flex-direction: column;
-  align-items: center;
+  width: 15%;
+  flex-direction: row;
+  justify-content: space-around;
 }
 .anime-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   width: 90vw;
-  margin: 1rem auto;
+  margin: 2rem auto;
   padding: 3rem auto;
-  align-items: center;
   align-items: center;
 }
 .poster {
@@ -47,17 +47,26 @@ body {
 }
 
 .anime-header {
-  text-align: center;
   color: rgb(161, 161, 161);
   font-size: 1.3rem;
+  text-align: center;
 }
 
-#nav-buttons {
+#nav {
   display: flex;
   flex: row;
   align-items: center;
   justify-content: space-evenly;
   margin: 2rem;
+}
+
+#page-number {
+  font-size: 2.75rem;
+  color: white;
+}
+
+.anime-card {
+  width: 12%;
 }
 // .movie-card {
 //   height: 65vh;
