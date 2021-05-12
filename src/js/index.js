@@ -14,11 +14,11 @@ const query = async function () {
         "beforeend",
         `  <div class="anime-card">
 
-            <img
+            <a href="anime.html"><img
               src="${anime.image_url}"
-             alt=""
+             alt="anime-poster"
              class="poster"
-          />
+          /></a>
 
       <h1 class="anime-header">${anime.title}</h1>
      </div>`

@@ -14,7 +14,9 @@ body {
   //   margin: 3rem auto;
   // background-color: #2e51a2;
 }
-
+.hi {
+  color: red;
+}
 #menu {
   display: flex;
   flex-direction: row;
@@ -50,6 +52,7 @@ body {
   color: rgb(161, 161, 161);
   font-size: 1.3rem;
   text-align: center;
+  transform: translateX(-7.5%);
 }
 
 #nav {
