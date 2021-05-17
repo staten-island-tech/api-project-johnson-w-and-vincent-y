@@ -9,22 +9,22 @@ const query = async function () {
       "https://api.jikan.moe/v3/search/anime?q=&order_by=score&sort=desc&page=1"
     );
     const data = await response.json();
-    data.results.forEach((anime) => {
-      DOMSelectors.grid.insertAdjacentHTML(
-        "beforeend",
-        `  <div class="anime-card">
+    // data.results.forEach((anime) => {
+    //   DOMSelectors.grid.insertAdjacentHTML(
+    //     "beforeend",
+    //     `  <div class="anime-card">
 
-                 <a href="anime.html"><img
-                   src="${anime.image_url}"
-                  alt="anime-poster"
-                  class="poster"
-               /></a>
+    //              <a href="anime.html"><img
+    //                src="${anime.image_url}"
+    //               alt="anime-poster"
+    //               class="poster"
+    //            /></a>
 
-           <h1 class="anime-header">${anime.title}</h1>
+    //        <h1 class="anime-header">${anime.title}</h1>
 
-         </div>`
-      );
-    });
+    //      </div>`
+    //   );
+    // });
     console.log(data.results);
   } catch (error) {
     alert("Something went wrong!");
