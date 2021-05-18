@@ -14,7 +14,7 @@ body {
   //   margin: 3rem auto;
   // background-color: #2e51a2;
 }
-.hi {
+.bye {
   color: red;
 }
 #menu {
@@ -61,6 +61,8 @@ body {
   align-items: center;
   justify-content: space-evenly;
   margin: 2rem;
+  width: 50%;
+  transform: translateX(45%);
 }
 
 #page-number {
@@ -71,6 +73,15 @@ body {
 .anime-card {
   width: 12%;
 }
+
+.nav-btn {
+  background: orange;
+  padding: 1rem;
+  border-radius: 2rem;
+  width: 10rem;
+  cursor: pointer;
+}
+
 // .movie-card {
 //   height: 65vh;
 //   width: 20vw;
