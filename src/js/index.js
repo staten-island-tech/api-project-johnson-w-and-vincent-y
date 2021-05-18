@@ -1,12 +1,11 @@
 import { DOMSelectors } from "./DOM";
 
-const key = "YOURKEYHERE";
-console.log(key);
+let page = 1;
 
 const query = async function () {
   try {
     const response = await fetch(
-      "https://api.jikan.moe/v3/search/anime?q=&order_by=score&sort=desc&page=1"
+      `https://api.jikan.moe/v3/search/anime?q=&order_by=score&sort=desc&page=${page}`
     );
     const data = await response.json();
     data.results.forEach((anime) => {
@@ -26,8 +25,19 @@ const query = async function () {
       );
     });
     console.log(data.results);
+    console.log(data);
   } catch (error) {
     alert("Something went wrong!");
   }
 };
 query();
+
+// function nextPage() {
+//   if (page < 30) {
+//     page++;
+//     query();
+//   } else {
+//   }
+// }
+
+// DOMSelectors.nextBtn.addEventListener("click", nextPage());
