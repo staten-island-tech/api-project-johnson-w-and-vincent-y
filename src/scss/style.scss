@@ -14,9 +14,7 @@ body {
   //   margin: 3rem auto;
   // background-color: #2e51a2;
 }
-.bye {
-  color: red;
-}
+
 #menu {
   display: flex;
   flex-direction: row;
@@ -49,37 +47,33 @@ body {
 }
 
 .anime-header {
-  color: rgb(255, 255, 255);
-  font-size: 1.7rem;
+  color: rgb(161, 161, 161);
+  font-size: 1.3rem;
   text-align: center;
   transform: translateX(-7.5%);
 }
 
 #nav {
   display: flex;
-  flex: row;
+  flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
-  margin: 2rem;
-  width: 50%;
-  transform: translateX(45%);
-}
-
-#page-number {
-  font-size: 2.75rem;
-  color: white;
 }
 
 .anime-card {
   width: 12%;
 }
 
-.nav-btn {
+#load-btn {
   background: orange;
   padding: 1rem;
   border-radius: 2rem;
   width: 10rem;
   cursor: pointer;
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: bold;
+  margin: 2rem;
+  transform: translateX(700%);
 }
 
 .caption {
