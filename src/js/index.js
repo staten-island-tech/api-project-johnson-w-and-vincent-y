@@ -24,29 +24,29 @@ const query = async function () {
          </div>`
       );
     });
-    // data.results.forEach((animeInfo) => {
-    //   DOMSelectors.info.insertAdjacentElement(
-    //     "afterbegin",
-    //     `<div id="info">
-    //     <img
-    //     src=${animeInfo.img_url}"
-    //    alt="anime-img"
-    //    class="anime-img"
-    // />
-    // <div class="caption-box">
-    // <p class="caption">Title: ${animeInfo.title}</p>
-    // <p class="caption">Score: ${animeInfo.score}</p>
-    // <p class="caption">Episodes: ${animeInfo.episodes}</p>
-    // <p class="caption">Type: ${animeInfo.type}</p>
-    // <p class="caption">Rated: ${animeInfo.rated}</p>
-    //   </div>
-    // </div>
-    //   <div class="synopsis-box">
-    //       <h1 class="synopsis-header">Synopsis</h1>
-    //       <p class="synopsis">${animeInfo.synopsis}</p>
-    //   </div> `
-    //   );
-    // });
+    data.results.forEach((animeInfo) => {
+      DOMSelectors.info.insertAdjacentElement(
+        "afterbegin",
+        `<div id="info">
+        <img
+        src=${animeInfo.img_url}"
+       alt="anime-img"
+       class="anime-img"
+    />
+    <div class="caption-box">
+    <p class="caption">Title: ${animeInfo.title}</p>
+    <p class="caption">Score: ${animeInfo.score}</p>
+    <p class="caption">Episodes: ${animeInfo.episodes}</p>
+    <p class="caption">Type: ${animeInfo.type}</p>
+    <p class="caption">Rated: ${animeInfo.rated}</p>
+      </div>
+    </div>
+      <div class="synopsis-box">
+          <h1 class="synopsis-header">Synopsis</h1>
+          <p class="synopsis">${animeInfo.synopsis}</p>
+      </div> `
+      );
+    });
     console.log(data.results);
     console.log(data);
   } catch (error) {
