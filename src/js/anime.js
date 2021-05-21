@@ -1,29 +1,13 @@
 import { DOMSelectors } from "./DOM";
+import { page } from "./index";
+console.log(DOMSelectors.info);
 
-let page = 1;
-
-const query = async function () {
+const query2 = async function () {
   try {
-    const response = await fetch(
-      `https://api.jikan.moe/v3/search/anime?q=&order_by=score&sort=desc&page=${page}`
+    const response2 = await fetch(
+      `https://api.jikan.moe/v3/search/anime?q=&order_by=score&sort=desc&page=1`
     );
-    const data = await response.json();
-    data.results.forEach((anime) => {
-      DOMSelectors.grid.insertAdjacentHTML(
-        "beforeend",
-        `  <div class="anime-card">
-
-                 <a href="anime.html"><img
-                   src="${anime.image_url}"
-                  alt="anime-poster"
-                  class="poster"
-               /></a>
-
-           <h1 class="anime-header">${anime.title}</h1>
-
-         </div>`
-      );
-    });
+    const data2 = await response2.json();
 
     // data.results.forEach((anime) => {
     //   DOMSelectors.info.insertAdjacentElement(
@@ -48,18 +32,9 @@ const query = async function () {
     //   </div> `
     //   );
     // });
-    console.log(data.results);
-    console.log(data);
+    console.log(data2.results);
   } catch (error) {
     alert("Something went wrong!");
   }
 };
-query();
-
-function loadData() {
-  if (page < 359) {
-    page++;
-    query();
-  }
-}
-DOMSelectors.loadBtn.addEventListener("click", loadData);
+query2();
