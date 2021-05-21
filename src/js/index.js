@@ -1,7 +1,7 @@
 import { DOMSelectors } from "./DOM";
 
 let page = 1;
-
+console.log(DOMSelectors.info);
 const query = async function () {
   try {
     const response = await fetch(
@@ -24,6 +24,7 @@ const query = async function () {
          </div>`
       );
     });
+
     // data.results.forEach((anime) => {
     //   DOMSelectors.info.insertAdjacentElement(
     //     "beforeend",
@@ -61,5 +62,3 @@ DOMSelectors.loadBtn.addEventListener("click", () => {
     query();
   }
 });
-
-console.log(data);
