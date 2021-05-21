@@ -56,9 +56,10 @@ const query = async function () {
 };
 query();
 
-DOMSelectors.loadBtn.addEventListener("click", () => {
+function loadData() {
   if (page < 359) {
     page++;
     query();
   }
-});
+}
+DOMSelectors.loadBtn.addEventListener("click", loadData);
