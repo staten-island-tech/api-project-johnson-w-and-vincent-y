@@ -11,17 +11,24 @@ const query = async function () {
     data.results.forEach((anime) => {
       DOMSelectors.grid.insertAdjacentHTML(
         "beforeend",
-        `  <div class="anime-card">
-
-                 <a href="anime.html"><img
-                   src="${anime.image_url}"
-                  alt="anime-poster"
-                  class="poster"
-               /></a>
-
-           <h1 class="anime-header">${anime.title}</h1>
-
-         </div>`
+        `  <<div class="anime-card">
+        <div class="anime-card-front">
+               <img
+                     src="${anime.image_url}"
+                    alt=""
+                    class="poster"
+                 /> 
+                 
+             <h1 class="anime-header">${anime.title}</h1>
+            </div>
+            <div class="anime-card-back">
+              <p class="caption">Title: ${anime.title}</p>
+              <p class="caption">Score: ${anime.score}</p>
+              <p class="caption">Episodes: ${anime.episodes}</p>
+              <p class="caption">Type: ${anime.type}</p>
+              <p class="caption">Rated: ${anime.rated}</p>
+                </div>
+              </div>`
       );
     });
 
@@ -63,3 +70,4 @@ function loadData() {
   }
 }
 DOMSelectors.loadBtn.addEventListener("click", loadData);
+console.log(page);

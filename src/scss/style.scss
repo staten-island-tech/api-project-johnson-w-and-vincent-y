@@ -37,6 +37,7 @@ body {
   margin: 2rem auto;
   padding: 3rem auto;
   align-items: center;
+  position: relative;
 }
 .poster {
   height: 25rem;
@@ -50,7 +51,7 @@ body {
   color: rgb(161, 161, 161);
   font-size: 1.3rem;
   text-align: center;
-  transform: translateX(-7.5%);
+  // transform: translateX(-7.5%);
 }
 
 #nav {
@@ -60,9 +61,37 @@ body {
 }
 
 .anime-card {
-  width: 12%;
+  width: 12vw;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+  margin: 15rem auto;
+  transform: translateY(100%);
 }
-
+.anime-card:hover {
+  transform: rotateY(180deg);
+}
+.anime-card-front {
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.anime-card-back {
+  position: absolute;
+  background-color: orange;
+  height: 25rem;
+  width: 18rem;
+  border-radius: 0.5rem;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  text-align: center;
+  width: 100%;
+  // height: 100%;
+}
 #load-btn {
   background: orange;
   padding: 1rem;
@@ -73,12 +102,12 @@ body {
   text-align: center;
   font-weight: bold;
   margin: 2rem;
-  transform: translateX(700%);
+  transform: translate(725%, 400%);
 }
 
 .caption {
   color: white;
-  font-size: 2.5rem;
+  font-size: 1.75rem;
 }
 
 .synopsis-box {
@@ -121,7 +150,6 @@ body {
 //   height: 100%;
 //   top: 0;
 //   left: 0;
-//   /* background-image: url("https://image.tmdb.org/t/p/w300/r7vmZjiyZw9rpJMQJdXpjgiCOk9.jpg"); */
 //   background-position: center;
 //   z-index: 3;
 //   transition: all 0.3s;
@@ -133,13 +161,12 @@ body {
 //   top: 0;
 //   left: 0;
 //   z-index: 1;
-
-//   display: none;
+//   // display: none;
 //   flex-direction: column;
 //   justify-content: space-around;
 //   align-items: center;
 //   color: white;
-//   background-color: rgba(33, 33, 33, 0.8);
+//   background-color: orange;
 //   width: 100%;
 //   height: 100%;
 // }
