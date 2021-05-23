@@ -10,7 +10,7 @@ const listen = function (){
             console.log("async")
           try {
             const response = await fetch(
-              `https://api.jikan.moe/v3/search/anime?q=${searchParams}&Boku&page=1&genre=12&genre_exclude=0`
+              ` https://api.jikan.moe/v3/search/anime?q=${searchParams}&order_by=members&sort=desc&page=1/search/anime?q=Boku&page=1&genre=12&genre_exclude=0`
             );
             const data = await response.json();
             data.results.forEach((anime) => {
