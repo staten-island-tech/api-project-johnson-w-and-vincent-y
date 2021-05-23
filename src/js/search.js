@@ -2,13 +2,15 @@ import {DOMSelectors } from "./DOM"
 
 const listen = function (){
     DOMSelectors.searchForm.addEventListener("submit", function(e){
+        console.log("submit")
         e.preventDefault(); //stop the form from refreshing the page
         const searchParams = DOMSelectors.searchArea.value; //whatever the user wants to search 
-        const searchQuery = 
-        const query = async function () {
+        console.log(searchParams)
+        const searchQuery  = async function () {
+
           try {
             const response = await fetch(
-              `https://api.jikan.moe/v3/search/anime?q=&order_by=score&sort=desc&page=${page}`
+              `https://api.jikan.moe/v3/search/anime?q=${searchParams}&Boku&page=1&genre=12&genre_exclude=0`
             );
             const data = await response.json();
             data.results.forEach((anime) => {
@@ -20,8 +22,7 @@ const listen = function (){
                              src="${anime.image_url}"
                             alt=""
                             class="poster"
-                         /> 
-                         
+                         />
                      <h1 class="anime-header">${anime.title}</h1>
                     </div>
                     <div class="anime-card-back">
@@ -60,9 +61,12 @@ const listen = function (){
             // });
             console.log(data.results);
             console.log(data);
+                searchQuery()
           } catch (error) {
             alert("Something went wrong!");
           }
         };
     })
-}
+};
+
+listen();
