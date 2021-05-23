@@ -70,6 +70,7 @@ body {
 }
 .anime-card:hover {
   transform: rotateY(180deg);
+  transition: all 1.3s;
 }
 .anime-card-front {
   position: absolute;

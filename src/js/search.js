@@ -3,10 +3,11 @@ import { DOMSelectors } from "./DOM";
 const listen = function () {
   DOMSelectors.searchForm.addEventListener("submit", function (e) {
     e.preventDefault(); //stop the form from refreshing the page
+    DOMSelectors.grid.innerHTML="";
     const searchParams = DOMSelectors.searchArea.value; //whatever the user wants to search
     console.log(searchParams);
     const searchQuery = async function () {
-      console.log("async");
+    
       try {
         const response = await fetch(
           ` https://api.jikan.moe/v3/search/anime?q=${searchParams}&page=1`
