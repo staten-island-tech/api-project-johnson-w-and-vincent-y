@@ -2,12 +2,12 @@ import {DOMSelectors } from "./DOM"
 
 const listen = function (){
     DOMSelectors.searchForm.addEventListener("submit", function(e){
-        console.log("submit")
+
         e.preventDefault(); //stop the form from refreshing the page
         const searchParams = DOMSelectors.searchArea.value; //whatever the user wants to search 
         console.log(searchParams)
         const searchQuery  = async function () {
-
+            console.log("async")
           try {
             const response = await fetch(
               `https://api.jikan.moe/v3/search/anime?q=${searchParams}&Boku&page=1&genre=12&genre_exclude=0`
@@ -36,7 +36,17 @@ const listen = function (){
               );
             });
         
-            // data.results.forEach((anime) => {
+          } catch (error) {
+            alert("Something went wrong!");
+          }
+        };
+        searchQuery()
+    })
+};
+
+listen();
+
+ // data.results.forEach((anime) => {
             //   DOMSelectors.info.insertAdjacentElement(
             //     "beforeend",
             //     `<div id="info">
@@ -59,14 +69,4 @@ const listen = function (){
             //   </div> `
             //   );
             // });
-            console.log(data.results);
-            console.log(data);
-                searchQuery()
-          } catch (error) {
-            alert("Something went wrong!");
-          }
-        };
-    })
-};
-
-listen();
+    
