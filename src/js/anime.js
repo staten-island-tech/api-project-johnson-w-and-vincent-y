@@ -39,4 +39,3 @@ const query2 = async function () {
   }
 };
 query2();
-
