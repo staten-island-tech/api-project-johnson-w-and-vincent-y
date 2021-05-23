@@ -1,3 +1,4 @@
+
 import { DOMSelectors } from "./DOM";
 
 console.log(DOMSelectors.info);
@@ -38,3 +39,4 @@ const query2 = async function () {
   }
 };
 query2();
+
