@@ -70,4 +70,3 @@ function loadData() {
   }
 }
 DOMSelectors.loadBtn.addEventListener("click", loadData);
-console.log(page);

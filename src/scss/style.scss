@@ -23,12 +23,6 @@ body {
   align-items: center;
 }
 
-#search-form {
-  display: flex;
-  width: 15%;
-  flex-direction: row;
-  justify-content: space-around;
-}
 .anime-grid {
   display: flex;
   flex-wrap: wrap;
@@ -38,6 +32,8 @@ body {
   padding: 3rem auto;
   align-items: center;
   position: relative;
+
+  //   transform: translateY(-5%);
 }
 .poster {
   height: 25rem;
@@ -62,15 +58,19 @@ body {
 
 .anime-card {
   width: 12vw;
+  height: 30vh;
   position: relative;
   transform-style: preserve-3d;
-  transition: all 0.5s ease;
-  margin: 15rem auto;
-  transform: translateY(100%);
+  // margin: 15rem auto;
+  // transform: translateY(100%);
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  margin: 2rem auto;
+  transition: all 1.3s;
 }
 .anime-card:hover {
   transform: rotateY(180deg);
-  transition: all 1.3s;
 }
 .anime-card-front {
   position: absolute;
@@ -80,6 +80,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease;
 }
 .anime-card-back {
   position: absolute;
@@ -91,6 +94,9 @@ body {
   backface-visibility: hidden;
   text-align: center;
   width: 100%;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease;
   // height: 100%;
 }
 #load-btn {
@@ -103,7 +109,8 @@ body {
   text-align: center;
   font-weight: bold;
   margin: 2rem;
-  transform: translate(725%, 400%);
+  transform: translateX(725%);
+  // transform: translate(725%, 400%);
 }
 
 .caption {
@@ -138,38 +145,100 @@ body {
   color: white;
   display: none;
 }
-// .movie-card {
-//   height: 65vh;
-//   width: 20vw;
+
+.search-img {
+  transition: all 0.3s ease;
+}
+.search-img:hover {
+  transform: scale(1.1);
+}
+
+.search-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: scaleY(100%);
+}
+.search-header {
+  color: white;
+  font-size: 3rem;
+}
+
+#search-form {
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#search-area {
+  width: 20vw;
+  border-radius: 2rem;
+  border: none;
+}
+
+.submit-button {
+  background: orange;
+  padding: 1rem;
+  border-radius: 2rem;
+  width: 10rem;
+  cursor: pointer;
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: bold;
+  margin: 2rem;
+}
+
+.error {
+  color: red;
+  font-size: 3rem;
+  font-weight: bold;
+}
+// .search-header-link {
+//   position: relative;
+// }
+// .anime-card {
+//   width: 12vw;
+//   height: 30vh;
 //   margin: 0 auto;
 //   position: relative;
 //   margin: 2rem auto;
+//   transform-style: preserve-3d;
+//   transition: all 0.5s ease;
 // }
-// .movie-card-front {
+
+// .anime-card:hover {
+//   transform: rotateY(180deg);
+// }
+// .anime-card-front {
 //   position: absolute;
 //   width: 100%;
 //   height: 100%;
 //   top: 0;
 //   left: 0;
 //   background-position: center;
-//   z-index: 3;
+
 //   transition: all 0.3s;
 // }
 
-// .movie-card-back {
+// .anime-card-back {
 //   transition: all 0.3s;
 //   position: absolute;
 //   top: 0;
 //   left: 0;
-//   z-index: 1;
+
+//   transform: rotateY(180deg);
 //   // display: none;
 //   flex-direction: column;
 //   justify-content: space-around;
 //   align-items: center;
+//   text-align: center;
 //   color: white;
 //   background-color: orange;
-//   width: 100%;
+//   width: 8.55vw;
 //   height: 100%;
+//   border-radius: 0.5rem;
 // }
 // .movie-card-header {
 //   font-size: 2.4rem;

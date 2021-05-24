@@ -3,16 +3,30 @@ import { DOMSelectors } from "./DOM";
 const listen = function () {
   DOMSelectors.searchForm.addEventListener("submit", function (e) {
     e.preventDefault(); //stop the form from refreshing the page
-    DOMSelectors.grid.innerHTML="";
+    DOMSelectors.grid.innerHTML = "";
     const searchParams = DOMSelectors.searchArea.value; //whatever the user wants to search
     console.log(searchParams);
+    if (searchParams === "") {
+      DOMSelectors.grid.insertAdjacentHTML(
+        "beforeend",
+        `<div class="error">No Anime Name Inputted</div>`
+      );
+    }
+
     const searchQuery = async function () {
-    
       try {
         const response = await fetch(
           ` https://api.jikan.moe/v3/search/anime?q=${searchParams}&page=1`
         );
         const data = await response.json();
+        console.log(data.results);
+        function nothing() {
+          if (data.results == []) {
+            console.log("byebye");
+          }
+        }
+
+        nothing();
         data.results.forEach((anime) => {
           DOMSelectors.grid.insertAdjacentHTML(
             "beforeend",
