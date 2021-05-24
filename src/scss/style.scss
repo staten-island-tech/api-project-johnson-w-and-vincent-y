@@ -38,7 +38,7 @@ body {
 }
 .poster {
   height: 25rem;
-  // width: 20rem;
+  width: 20rem;
   border-radius: 0.5rem;
   // height: 100%;
   // width: 100%;
@@ -195,6 +195,10 @@ body {
   color: red;
   font-size: 3rem;
   font-weight: bold;
+}
+
+.load-btn {
+  display: none;
 }
 // .search-header-link {
 //   position: relative;
