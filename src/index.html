@@ -2,18 +2,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Asap:wght@400;600&family=Josefin+Slab:ital,wght@0,300;0,400;1,300&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="scss/style.scss" />
+    <title>Anime Api Project</title>
+    
+    <link rel="stylesheet" href="scss/style.scss"/>
   </head>
   <body>
-    <h1 class="header">SITHS Movie Database</h1>
-    <h2 class="top-rated">Our Top Rated Movies</h2>
-    <section class="movie-grid">
-      <!--  <div class="movie-card">
+    <div id="menu">
+    <h1 class="header">Anime Library
+    </h1>
+    <h2 class="search-header">
+      <a href="search.html" class="search-header-link">
+        <img class="search-img" src="https://img.icons8.com/color/48/000000/search--v2.png"/>
+      </a>
+    </h2>
+  </div>
+    <section class="anime-grid">
+      <!-- <div class="anime-card">
+    <div class="anime-card-front">
+            <a href="anime.html"><img
+                 src="https://cdn.myanimelist.net/images/anime/1517/100633.jpg?s=4540a01b5883647ade494cd28392f100"
+                alt=""
+                class="poster"
+             /></a> 
+             
+         <h1 class="anime-header">Attack on Titan</h1>
+        </div>
+        <div class="anime-card-back">
+          <p class="caption">Title: ${anime.title}</p>
+          <p class="caption">Score: ${anime.score}</p>
+          <p class="caption">Episodes: ${anime.episodes}</p>
+          <p class="caption">Type: ${anime.type}</p>
+          <p class="caption">Rated: ${anime.rated}</p>
+            </div>
+          </div>
+       -->
+      <!-- <div class="movie-card">
         <div class="movie-card-front">
           <img
             src="https://image.tmdb.org/t/p/w300/r7vmZjiyZw9rpJMQJdXpjgiCOk9.jpg"
@@ -40,8 +63,13 @@
           </div>
         </div>
       </div> -->
+     
     </section>
 
+    <div id="nav">
+      <div id="load-btn">Load More</div> 
+    </div>
+  
     <script src="js/index.js"></script>
   </body>
 </html>

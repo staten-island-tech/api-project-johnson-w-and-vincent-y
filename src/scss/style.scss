@@ -1,117 +1,289 @@
-$font-main: "Asap", sans-serif;
-$font-second: "Josefin Slab", serif;
 html,
 body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   font-size: 62.5%;
-  color: white;
-  font-family: $font-second;
   font-weight: 500;
-}
-body {
-  background-color: #111;
+  background-color: black;
 }
 
 .header {
   font-size: 5.2rem;
+  color: orange;
 
-  margin: 3rem auto;
-  text-align: center;
+  //   margin: 3rem auto;
+  // background-color: #2e51a2;
 }
-.top-rated {
-  margin: 1rem auto 2rem auto;
-  text-align: center;
-  font-size: 3.8rem;
+
+#menu {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  justify-content: space-around;
+  align-items: center;
 }
-.movie-grid {
+
+.anime-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   width: 90vw;
-  background-color: white;
-  margin: 1rem auto;
+  margin: 2rem auto;
   padding: 3rem auto;
   align-items: center;
-}
-.movie-card {
-  height: 65vh;
-  width: 20vw;
-  margin: 0 auto;
   position: relative;
-  margin: 2rem auto;
-}
-.movie-card-front {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  /* background-image: url("https://image.tmdb.org/t/p/w300/r7vmZjiyZw9rpJMQJdXpjgiCOk9.jpg"); */
-  background-position: center;
-  z-index: 3;
-  transition: all 0.3s;
+
+  //   transform: translateY(-5%);
 }
 .poster {
-  width: 100%;
-  height: 100%;
+  height: 25rem;
+  width: 20rem;
+  border-radius: 0.5rem;
+  // height: 100%;
+  // width: 100%;
 }
-.movie-card-back {
-  transition: all 0.3s;
-  position: absolute;
+
+.anime-header {
+  color: rgb(161, 161, 161);
+  font-size: 1.3rem;
+  text-align: center;
+  // transform: translateX(-7.5%);
+}
+
+#nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.anime-card {
+  width: 12vw;
+  height: 30vh;
+  position: relative;
+  transform-style: preserve-3d;
+  // margin: 15rem auto;
+  // transform: translateY(100%);
   top: 0;
   left: 0;
-  z-index: 1;
-
-  display: none;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  color: white;
-  background-color: rgba(33, 33, 33, 0.8);
+  margin: 0 auto;
+  margin: 2rem auto;
+  transition: all 1.3s;
+}
+.anime-card:hover {
+  transform: rotateY(180deg);
+}
+.anime-card-front {
+  position: absolute;
+  backface-visibility: hidden;
   width: 100%;
   height: 100%;
-}
-.movie-card-header {
-  font-size: 2.4rem;
-  text-transform: uppercase;
-  margin: 1rem auto;
-
-  text-align: center;
-}
-.score-box,
-.release-box {
-  text-align: center;
-}
-
-.movie-genres {
-  font-size: 1.6rem;
-  padding: 1rem 2rem;
   display: flex;
-  width: 100%;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease;
 }
-.movie-genre {
-  list-style: none;
+.anime-card-back {
+  position: absolute;
+  background-color: orange;
+  height: 25rem;
+  width: 18rem;
+  border-radius: 0.5rem;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  text-align: center;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease;
+  // height: 100%;
 }
-.user-score {
-  font-size: 2rem;
+#load-btn {
+  background: orange;
+  padding: 1rem;
+  border-radius: 2rem;
+  width: 10rem;
+  cursor: pointer;
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: bold;
+  margin: 2rem;
+  transform: translateX(725%);
+  // transform: translate(725%, 400%);
 }
-.release-date {
+
+.caption {
+  color: white;
+  font-size: 1.75rem;
+}
+
+.synopsis-box {
+  width: 40%;
+}
+.synopsis-header {
+  color: white;
+  font-size: 2.5rem;
+}
+.synopsis {
+  color: white;
   font-size: 2rem;
 }
 
-.movie-card:hover .movie-card-front {
-  z-index: 1;
+.anime-img {
+  width: 20rem;
 }
-.movie-card:hover .movie-card-back {
-  z-index: 3;
+#anime-info {
+  width: 90%;
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 }
-.test {
-  color: black;
+
+.none {
+  color: white;
+  display: none;
+}
+
+.search-img {
+  transition: all 0.3s ease;
+}
+.search-img:hover {
+  transform: scale(1.1);
+}
+
+.search-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: scaleY(100%);
+}
+.search-header {
+  color: white;
   font-size: 3rem;
 }
+
+#search-form {
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#search-area {
+  width: 15vw;
+  border-radius: 2rem;
+  border: none;
+}
+
+.submit-button {
+  background: orange;
+  padding: 1rem;
+  border-radius: 2rem;
+  width: 10rem;
+  cursor: pointer;
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: bold;
+  margin: 2rem;
+}
+
+.error {
+  color: red;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.load-btn {
+  display: none;
+}
+// .search-header-link {
+//   position: relative;
+// }
+// .anime-card {
+//   width: 12vw;
+//   height: 30vh;
+//   margin: 0 auto;
+//   position: relative;
+//   margin: 2rem auto;
+//   transform-style: preserve-3d;
+//   transition: all 0.5s ease;
+// }
+
+// .anime-card:hover {
+//   transform: rotateY(180deg);
+// }
+// .anime-card-front {
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+//   top: 0;
+//   left: 0;
+//   background-position: center;
+
+//   transition: all 0.3s;
+// }
+
+// .anime-card-back {
+//   transition: all 0.3s;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+
+//   transform: rotateY(180deg);
+//   // display: none;
+//   flex-direction: column;
+//   justify-content: space-around;
+//   align-items: center;
+//   text-align: center;
+//   color: white;
+//   background-color: orange;
+//   width: 8.55vw;
+//   height: 100%;
+//   border-radius: 0.5rem;
+// }
+// .movie-card-header {
+//   font-size: 2.4rem;
+//   text-transform: uppercase;
+//   margin: 1rem auto;
+
+//   text-align: center;
+// }
+// .score-box,
+// .release-box {
+//   text-align: center;
+// }
+
+// .movie-genres {
+//   font-size: 1.6rem;
+//   padding: 1rem 2rem;
+//   display: flex;
+//   width: 100%;
+//   justify-content: space-around;
+//   flex-wrap: wrap;
+//   align-items: center;
+// }
+// .movie-genre {
+//   list-style: none;
+// }
+// .user-score {
+//   font-size: 2rem;
+// }
+// .release-date {
+//   font-size: 2rem;
+// }
+
+// .movie-card:hover .movie-card-front {
+//   z-index: 1;
+// }
+// .movie-card:hover .movie-card-back {
+//   z-index: 3;
+//   display: flex;
+// }
+// .test {
+//   color: black;
+//   font-size: 3rem;
+// }
